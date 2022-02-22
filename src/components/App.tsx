@@ -1,5 +1,5 @@
-import { VFC } from "react";
+import { VFC } from 'react'
 
-const App: VFC = () => <div>Sketch Challenge</div>;
+const App: VFC = () => <div>Sketch Challenge</div>
 
-export default App;
+export default App
