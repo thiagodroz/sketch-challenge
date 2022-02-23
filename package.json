@@ -2,6 +2,14 @@
   "name": "sketch-challenge",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint",
+    "lint:format": "prettier --write \"./src/**/*.{ts,tsx,js,json,md}\""
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -16,16 +24,24 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "yarn lint:format",
+      "yarn lint:js"
+    ],
+    "**/*.{js,json,css,md}": [
+      "yarn lint:format"
     ]
   },
   "browserslist": {
