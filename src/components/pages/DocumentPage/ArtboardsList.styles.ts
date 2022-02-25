@@ -14,6 +14,7 @@ export const Artboard = styled(Link)`
   flex-direction: column;
   align-items: center;
   width: 20%;
+  max-height: 40%;
   padding: 24px;
   text-decoration: none;
 `
