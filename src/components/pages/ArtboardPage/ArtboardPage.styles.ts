@@ -14,14 +14,22 @@ export const HeaderContent = styled.div`
 export const HeaderPageChanger = styled.div`
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 export const HeaderTitle = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 export const MainContent = styled.main`
@@ -39,7 +47,14 @@ export const ArtboardImage = styled.img`
 `
 
 export const ArtboardNavAnchor = styled(Link)<{ disabled: boolean }>`
-  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+
+  @media (min-width: 768px) {
+    padding: 8px 16px;
+  }
 
   ${({ disabled }) =>
     disabled &&
@@ -52,9 +67,21 @@ export const ArtboardNavAnchor = styled(Link)<{ disabled: boolean }>`
 export const ArrowLeftIcon = styled.img.attrs({
   src: arrowLeftIcon,
   alt: 'Previous artboard',
-})``
+})`
+  transform: scale(0.8);
+
+  @media (min-width: 768px) {
+    transform: scale(1);
+  }
+`
 
 export const ArrowRightIcon = styled.img.attrs({
   src: arrowRightIcon,
   alt: 'Next artboard',
-})``
+})`
+  transform: scale(0.8);
+
+  @media (min-width: 768px) {
+    transform: scale(1);
+  }
+`

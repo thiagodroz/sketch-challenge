@@ -32,7 +32,11 @@ export const Separator = styled.img.attrs({
   alt: 'Separator',
 })`
   height: 32px;
-  margin: 0 24px;
+  margin: 0 16px;
+
+  @media (min-width: 768px) {
+    margin: 0 24px;
+  }
 `
 
 export const CloseIcon = styled.img.attrs({

@@ -13,10 +13,20 @@ export const Artboard = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  width: 100%;
   max-height: 40%;
   padding: 24px;
   text-decoration: none;
+
+  @media (min-width: 480px) {
+    width: 50%;
+  }
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
 `
 
 export const ArtboardImageContainer = styled.div`
