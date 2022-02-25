@@ -39,5 +39,5 @@ export const CloseIcon = styled.img.attrs({
   src: closeIcon,
   alt: 'Close',
 })`
-  width: 24px;
+  width: 12px;
 `

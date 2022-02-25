@@ -14,8 +14,8 @@ export const Artboard = styled(Link)`
   flex-direction: column;
   align-items: center;
   width: 20%;
-  max-height: 40%;
   padding: 24px;
+  text-decoration: none;
 `
 
 export const ArtboardImageContainer = styled.div`
@@ -23,8 +23,8 @@ export const ArtboardImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 40%;
   width: 100%;
-  max-height: 100%;
 `
 
 export const ArtboardImage = styled.img`
