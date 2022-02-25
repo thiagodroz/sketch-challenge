@@ -50,6 +50,10 @@ In this case I used the default caching strategy of `Apollo Client` to let both 
 
 Obviously this strategy has it's own downsides. If the application had any mutation to change the artboards I'd need to be aware that the cache would need to be changed after the mutation. Other scenario is if the data is modified by third-parties and it's current value should be shown in real time in the frontend. The caching approach would need to be different or even decide that relying in `Apollo Client`'s cache isn't the best solution there.
 
+I used [GraphQL Code Generator](https://www.graphql-code-generator.com/) to automatically generate the typescript types based on the API Schema.
+
+The `types.ts` generated file is being ignored because I want it to be always generated when running or building.
+
 ## Folder Structure
 
 I don't have a favorite folder structure to follow. I like to test new ones and to go with one that the team is comfortable with. I like how `NextJS` works, because as you need to put all pages in a folder structure that reflects your routes you end-up having a separate folder for "non-page components".
@@ -72,10 +76,10 @@ Another addition to that is to avoid running those linters for all the code ever
 
 ## Possible Improvements
 
-- Move GraphQL url to .env
+When the `GraphQL Code Generator` creates the file with all typescript types, it generates everything with the `Maybe<T>` type. So everything looks like optional fields. A possible improvement would be to understand better the API return to know when should I use `!` or `?` to use the API results.
+
 - Add jest tests
 - Add storybook
 - Add Cypress tests
-- Add graphql-cli
 - Better error and not found pages
 - Add responsiveness

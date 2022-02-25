@@ -17,7 +17,7 @@ export const DocumentPage: VFC = () => {
   return (
     <>
       <Header>{data!.name}</Header>
-      <ArtboardsList artboards={data!.artboards.entries} />
+      <ArtboardsList artboards={data!.artboards!.entries} />
     </>
   )
 }

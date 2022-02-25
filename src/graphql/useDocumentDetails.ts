@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client'
 
-import { Share } from 'types/Document'
+import { Share } from 'types'
 
 const DOCUMENT_DETAILS = gql`
   query DocumentDetails($documentId: String!) {
@@ -41,5 +41,5 @@ export const useDocumentDetails = (documentId?: string) => {
     variables: { documentId },
   })
 
-  return { data: data?.share.version.document, loading, error }
+  return { data: data?.share?.version?.document, loading, error }
 }

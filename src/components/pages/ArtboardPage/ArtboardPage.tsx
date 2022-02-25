@@ -17,7 +17,7 @@ export const ArtboardPage: VFC = () => {
 
   if (error || !artboardIndex) return <div>Error...</div>
 
-  const { name, files } = data!.artboards.entries[artboardIndex - 1]
+  const { name, files } = data!.artboards!.entries[artboardIndex - 1]
   const documentPageUrl = `/documents/${documentId}`
 
   return (
@@ -31,10 +31,10 @@ export const ArtboardPage: VFC = () => {
             >
               <S.ArrowLeftIcon />
             </S.ArtboardNavAnchor>
-            {artboardIndex} / {data!.artboards.entries.length}
+            {artboardIndex} / {data!.artboards!.entries.length}
             <S.ArtboardNavAnchor
               to={`${documentPageUrl}/${artboardIndex + 1}`}
-              disabled={artboardIndex === data!.artboards.entries.length}
+              disabled={artboardIndex === data!.artboards!.entries.length}
             >
               <S.ArrowRightIcon />
             </S.ArtboardNavAnchor>
@@ -44,7 +44,7 @@ export const ArtboardPage: VFC = () => {
         </S.HeaderContent>
       </Header>
       <S.MainContent>
-        <S.ArtboardImage src={files[0].url} alt={name} />
+        <S.ArtboardImage src={files[0]!.url?.toString()} alt={name} />
       </S.MainContent>
     </>
   )

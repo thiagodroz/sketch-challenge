@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { Artboard } from 'types/Document'
+import { Artboard } from 'types'
 import * as S from './ArtboardsList.styles'
 
 interface ArtboardsListProps {
@@ -19,7 +19,9 @@ export const ArtboardsList: VFC<ArtboardsListProps> = ({ artboards }) => {
           to={`/documents/${documentId}/${index + 1}`}
         >
           <S.ArtboardImageContainer>
-            <S.ArtboardImage src={artboard.files[0].thumbnails[0].url} />
+            <S.ArtboardImage
+              src={artboard.files?.at(0)?.thumbnails?.at(0)?.url?.toString()}
+            />
           </S.ArtboardImageContainer>
           <S.ArtboardName>{artboard.name}</S.ArtboardName>
         </S.Artboard>
