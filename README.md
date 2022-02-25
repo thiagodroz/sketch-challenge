@@ -40,7 +40,7 @@ As I didn't use `NextJS`, I had to go with some routing library to complement `C
 I defined the application routes in the following way:
 
 - `/documents/:documentId` opens the `DocumentPage` that shows the document name and the list of artboards name and thumbnails;
-- `/documents/:documentId/:index` opens the `ArtboardPage` that shows the artboard image in details. It uses the `:index` parameter to know which artboard of the document it should display;
+- `/documents/:documentId/artboards/:index` opens the `ArtboardPage` that shows the artboard image in details. It uses the `:index` parameter to know which artboard of the document it should display;
 
 ## GraphQL
 

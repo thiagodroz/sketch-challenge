@@ -16,7 +16,7 @@ export const ArtboardsList: VFC<ArtboardsListProps> = ({ artboards }) => {
       {artboards.map((artboard, index) => (
         <S.Artboard
           key={artboard.name}
-          to={`/documents/${documentId}/${index + 1}`}
+          to={`/documents/${documentId}/artboards/${index + 1}`}
         >
           <S.ArtboardImageContainer>
             <S.ArtboardImage

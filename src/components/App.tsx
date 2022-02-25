@@ -15,7 +15,7 @@ const App: VFC = () => (
         <Route path="/" element={<div>home</div>} />
         <Route path="/documents/:documentId" element={<DocumentPage />} />
         <Route
-          path="/documents/:documentId/:index"
+          path="/documents/:documentId/artboards/:index"
           element={<ArtboardPage />}
         />
         <Route path="*" element={<div>Not found</div>} />

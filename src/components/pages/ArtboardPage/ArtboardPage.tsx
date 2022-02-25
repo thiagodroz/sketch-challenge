@@ -26,14 +26,14 @@ export const ArtboardPage: VFC = () => {
         <S.HeaderContent>
           <S.HeaderPageChanger>
             <S.ArtboardNavAnchor
-              to={`${documentPageUrl}/${artboardIndex - 1}`}
+              to={`${documentPageUrl}/artboards/${artboardIndex - 1}`}
               disabled={artboardIndex === 1}
             >
               <S.ArrowLeftIcon />
             </S.ArtboardNavAnchor>
             {artboardIndex} / {data!.artboards!.entries.length}
             <S.ArtboardNavAnchor
-              to={`${documentPageUrl}/${artboardIndex + 1}`}
+              to={`${documentPageUrl}/artboards/${artboardIndex + 1}`}
               disabled={artboardIndex === data!.artboards!.entries.length}
             >
               <S.ArrowRightIcon />
