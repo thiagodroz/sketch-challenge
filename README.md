@@ -13,6 +13,8 @@
 
 ## Running
 
+For the sake of security, the `.env` file is ignored and I commited a `.env.template` file to show the names of the environment variables. Before running the application, please create your own `.env` file and fill it with the correct values.
+
 To run the application I recommend using [Yarn](https://yarnpkg.com/) since it was using during the development and if you use [NPM](https://www.npmjs.com/) it wouldn't have a `package-lock.json`, leading to possible problems with package versions.
 
 To start the application in development mode you can simply run `yarn start`. It's gonna start the application at `localhost:3000`.
@@ -76,3 +78,4 @@ Another addition to that is to avoid running those linters for all the code ever
 - Add Cypress tests
 - Add graphql-cli
 - Better error and not found pages
+- Add responsiveness
