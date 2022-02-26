@@ -17,6 +17,8 @@ For the sake of security, the `.env` file is ignored and I commited a `.env.temp
 
 To run the application I recommend using [Yarn](https://yarnpkg.com/) since it was using during the development and if you use [NPM](https://www.npmjs.com/) it wouldn't have a `package-lock.json`, leading to possible problems with package versions.
 
+First of all, run `yarn` or `yarn install` to install all project dependencies.
+
 To start the application in development mode you can simply run `yarn start`. It's gonna start the application at `localhost:3000`.
 
 To build it to production you can simply run `yarn build`. It's gonna create `build` folder with all static files that you need to host in order to server the application.
@@ -82,4 +84,3 @@ When the `GraphQL Code Generator` creates the file with all typescript types, it
 - Add storybook
 - Add Cypress tests
 - Better error and not found pages
-- Add responsiveness
