@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "yarn generate && react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "yarn test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint:js": "eslint",
     "lint:format": "prettier --write \"./src/**/*.{ts,tsx,js,json,md}\"",
@@ -47,6 +48,20 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/**/index.ts",
+      "!<rootDir>/src/**/*.d.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/graphql/",
+      "<rootDir>/src/styles/",
+      "<rootDir>/src/types.ts",
+      "<rootDir>/src/index.tsx",
+      "<rootDir>/src/components/App.ts"
     ]
   },
   "lint-staged": {
