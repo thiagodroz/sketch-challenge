@@ -15,12 +15,14 @@ export const parameters = {
 }
 
 export const decorators = [
-  Story => (
+  (Story, { parameters }) => (
     <ApolloProvider client={client}>
-      <MemoryRouter>
+      <MemoryRouter
+        initialEntries={parameters.routerInitialEntries || undefined}
+      >
         <GlobalStyles />
         <Routes>
-          <Route path="/" element={<Story />} />
+          <Route path={parameters.routePath || '*'} element={<Story />} />
         </Routes>
       </MemoryRouter>
     </ApolloProvider>
