@@ -80,7 +80,6 @@ Another addition to that is to avoid running those linters for all the code ever
 
 When the `GraphQL Code Generator` creates the file with all typescript types, it generates everything with the `Maybe<T>` type. So everything looks like optional fields. A possible improvement would be to understand better the API return to know when should I use `!` or `?` to use the API results.
 
-- Add jest tests
 - Add storybook
 - Add Cypress tests
 - Better error and not found pages
