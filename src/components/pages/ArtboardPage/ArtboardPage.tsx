@@ -1,6 +1,7 @@
 import { VFC } from 'react'
 import { useParams } from 'react-router-dom'
 
+import { ErrorPage } from 'components/pages/ErrorPage'
 import { Header } from 'components/shared/Header'
 import { Loading } from 'components/shared/Loading'
 import { useDocumentDetails } from 'graphql/useDocumentDetails'
@@ -15,7 +16,7 @@ export const ArtboardPage: VFC = () => {
 
   if (loading) return <Loading />
 
-  if (error || !artboardIndex) return <div>Error...</div>
+  if (error || !artboardIndex) return <ErrorPage />
 
   const { name, files } = data!.artboards!.entries[artboardIndex - 1]
   const documentPageUrl = `/documents/${documentId}`

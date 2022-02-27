@@ -1,6 +1,7 @@
 import { VFC } from 'react'
 import { useParams } from 'react-router-dom'
 
+import { ErrorPage } from 'components/pages/ErrorPage'
 import { Header } from 'components/shared/Header'
 import { Loading } from 'components/shared/Loading'
 import { useDocumentDetails } from 'graphql/useDocumentDetails'
@@ -12,7 +13,7 @@ export const DocumentPage: VFC = () => {
 
   if (loading) return <Loading />
 
-  if (error) return <div>Error...</div>
+  if (error) return <ErrorPage />
 
   return (
     <>

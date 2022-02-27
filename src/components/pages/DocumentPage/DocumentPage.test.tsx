@@ -28,7 +28,7 @@ describe('<DocumentPage />', () => {
       }))
 
     render(<DocumentPage />, { wrapper: MemoryRouter })
-    expect(screen.getByText('Error...')).toBeInTheDocument()
+    expect(screen.getByText('Error')).toBeInTheDocument()
   })
   it('renders the artboard list if the query returns successfully', () => {
     const data = {
