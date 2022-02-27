@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:3000/",
+  "env": {
+    "documentId": "e981971c-ff57-46dc-a932-a60dc1804992",
+    "documentName": "Screens",
+    "artboardName": "OSX",
+    "artboardIndex": 12
+  }
+}
