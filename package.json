@@ -52,6 +52,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
+    "storybook-addon-mock": "^2.3.0",
     "webpack": "^5.69.1"
   },
   "resolutions": {
@@ -77,7 +78,8 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/src/**/index.ts",
-      "!<rootDir>/src/**/*.d.ts"
+      "!<rootDir>/src/**/*.d.ts",
+      "!<rootDir>/src/**/*.stories.tsx"
     ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/graphql/",

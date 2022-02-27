@@ -1,5 +1,7 @@
 import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { ApolloProvider } from '@apollo/client'
 
+import { client } from '../src/graphql/client'
 import { GlobalStyles } from '../src/styles/global'
 
 export const parameters = {
@@ -14,11 +16,13 @@ export const parameters = {
 
 export const decorators = [
   Story => (
-    <MemoryRouter>
-      <GlobalStyles />
-      <Routes>
-        <Route path="/" element={<Story />} />
-      </Routes>
-    </MemoryRouter>
+    <ApolloProvider client={client}>
+      <MemoryRouter>
+        <GlobalStyles />
+        <Routes>
+          <Route path="/" element={<Story />} />
+        </Routes>
+      </MemoryRouter>
+    </ApolloProvider>
   ),
 ]
