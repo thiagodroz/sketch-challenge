@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "yarn generate && react-scripts build",
     "test": "react-scripts test",
+    "test:single": "react-scripts test -- --watchAll=false",
     "test:coverage": "yarn test -- --coverage --watchAll=false && open ./coverage/lcov-report/index.html",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
@@ -95,7 +96,8 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "yarn lint:format",
-      "yarn lint:js"
+      "yarn lint:js",
+      "yarn test:single"
     ],
     "**/*.{js,json,css,md}": [
       "yarn lint:format"

@@ -76,10 +76,20 @@ Another addition to that is to avoid running those linters for all the code ever
 
 ## Testing
 
+### Unit tests
+
+To implement unit tests I used [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/). To run those tests just run `yarn test`. If you don't want to run it in watch mode just run `yarn test:single`. To generate and open the code coverage report you can run `yarn test:coverage`.
+
+### Storybook
+
+The [Storybook](https://storybook.js.org/) implementation in this project isn't helping with tests right now. The main goal is to develop those components/pages in isolation. But for the sake of tests, we can use [Chromatic](https://www.chromatic.com/). Developed by the same team that created `Storybook`, this tool can help you to run regression tests and detect `visual regressions` before a pull request is approved.
+
+### End-to-end tests
+
+To implement e2e tests I used [Cypress](https://www.cypress.io/). I consider it a really powerful tool because it's not only capable of running e2e tests in a Selenium way, but it's also capable of generate screenshots and videos of the tests and upload it as artifacts to pull requests.
+
 ## Possible Improvements
 
 When the `GraphQL Code Generator` creates the file with all typescript types, it generates everything with the `Maybe<T>` type. So everything looks like optional fields. A possible improvement would be to understand better the API return to know when should I use `!` or `?` to use the API results.
 
-- Add storybook
-- Add Cypress tests
 - Better error and not found pages
