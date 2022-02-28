@@ -91,5 +91,3 @@ To implement e2e tests I used [Cypress](https://www.cypress.io/). I consider it 
 ## Possible Improvements
 
 When the `GraphQL Code Generator` creates the file with all typescript types, it generates everything with the `Maybe<T>` type. So everything looks like optional fields. A possible improvement would be to understand better the API return to know when should I use `!` or `?` to use the API results.
-
-- Better error and not found pages
